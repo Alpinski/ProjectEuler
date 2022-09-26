@@ -2,12 +2,53 @@
 
 int multiplesOf3Or5();
 int evenFibonacciNumbers();
+void largestPrimeFactor(long long n);
+int largestPrimeFactor1(long long n);
+
 int main()
 {
-	int result;
-	result = evenFibonacciNumbers();
-	std::cout << result;
-	return 0;
+	int result = largestPrimeFactor1(600851475143);
+	std::cout << result << std::endl;
+}
+
+int largestPrimeFactor1(long long n)
+{
+	long long a = 2;
+	long long b = 0;
+	while (a * a <= n)
+	{
+		if (n % a == 0)
+		{
+			
+			n /= a;
+		}
+		else
+		{
+			a++;
+		}
+	}
+	return n;
+}
+
+void largestPrimeFactor(long long n)
+{
+	long long a = 2;
+	while (a * a <= n)
+	{
+		if (n % a == 0)
+		{
+			std::cout << a << std::endl;
+			n /= a;
+		}
+		else
+		{
+			a++;
+		}	
+	}
+	if (n > 1)
+	{
+		std::cout << n << std::endl;
+	}
 }
 
 int evenFibonacciNumbers()
