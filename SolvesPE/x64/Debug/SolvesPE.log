@@ -1,3 +1,2 @@
 ﻿  SolvesPE.cpp
-D:\ProjectEuler\SolvesPE\SolvesPE.cpp(36,9): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
   SolvesPE.vcxproj -> D:\ProjectEuler\SolvesPE\x64\Debug\SolvesPE.exe
